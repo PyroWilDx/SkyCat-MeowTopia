@@ -1254,7 +1254,7 @@ metadata/_edit_vertical_guides_ = [1057.0]
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_48gqw")
-animation = &"RunUp"
+animation = &"IdleDown"
 speed_scale = 4.0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
