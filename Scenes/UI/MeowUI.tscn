@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm67i0r4intpg"]
+
+[ext_resource type="Texture2D" uid="uid://dh2a3dr12pegm" path="res://Sprites/UI/UI.png" id="1_d5eb0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr33l"]
+atlas = ExtResource("1_d5eb0")
+region = Rect2(646, 5, 20, 21)
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HotBar" type="GridContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+columns = 10
+
+[node name="Item1" type="TextureButton" parent="Control/MarginContainer/HotBar"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_yr33l")
+
+[node name="Item2" type="TextureButton" parent="Control/MarginContainer/HotBar"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_yr33l")
