@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy3l01c1abf5o"
-path="res://.godot/imported/SoilLand.png-b6adf7ca16fb97965415e28627dff987.ctex"
+uid="uid://br6j1oonwa2bf"
+path="res://.godot/imported/GrassSlope.png-03f70fd9efd57bb6818a4a863edf4971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/World/SoilLand.png"
-dest_files=["res://.godot/imported/SoilLand.png-b6adf7ca16fb97965415e28627dff987.ctex"]
+source_file="res://Sprites/World/Land/GrassSlope.png"
+dest_files=["res://.godot/imported/GrassSlope.png-03f70fd9efd57bb6818a4a863edf4971.ctex"]
 
 [params]
 

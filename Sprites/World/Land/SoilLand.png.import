@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b21jo0i2kg6wk"
-path="res://.godot/imported/StoneLand.png-6038341478a90fd9ecc6b779a9c48ded.ctex"
+uid="uid://cy3l01c1abf5o"
+path="res://.godot/imported/SoilLand.png-15503b665b2623e961f5fcf89405bde4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/World/StoneLand.png"
-dest_files=["res://.godot/imported/StoneLand.png-6038341478a90fd9ecc6b779a9c48ded.ctex"]
+source_file="res://Sprites/World/Land/SoilLand.png"
+dest_files=["res://.godot/imported/SoilLand.png-15503b665b2623e961f5fcf89405bde4.ctex"]
 
 [params]
 

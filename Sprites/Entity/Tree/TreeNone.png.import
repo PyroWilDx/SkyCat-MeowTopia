@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhdvegonyf1p"
-path="res://.godot/imported/GrassLand.png-400c98ac1170492647b01efe7f9b73f3.ctex"
+uid="uid://bk2lvk0a7uif6"
+path="res://.godot/imported/TreeNone.png-d2f65a639cc4d688133c00c2cb74ca7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/World/GrassLand.png"
-dest_files=["res://.godot/imported/GrassLand.png-400c98ac1170492647b01efe7f9b73f3.ctex"]
+source_file="res://Sprites/Entity/Tree/TreeNone.png"
+dest_files=["res://.godot/imported/TreeNone.png-d2f65a639cc4d688133c00c2cb74ca7b.ctex"]
 
 [params]
 

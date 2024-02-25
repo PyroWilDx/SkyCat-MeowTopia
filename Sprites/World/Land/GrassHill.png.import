@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv3h62khx2kjt"
-path="res://.godot/imported/GrassHillLand.png-8df28588e9022fe65193c490087696d3.ctex"
+uid="uid://h0xi67qjfgxp"
+path="res://.godot/imported/GrassHill.png-f5ecfe9c1696a299fc54ec0c9ad7b1e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/World/GrassHillLand.png"
-dest_files=["res://.godot/imported/GrassHillLand.png-8df28588e9022fe65193c490087696d3.ctex"]
+source_file="res://Sprites/World/Land/GrassHill.png"
+dest_files=["res://.godot/imported/GrassHill.png-f5ecfe9c1696a299fc54ec0c9ad7b1e9.ctex"]
 
 [params]
 
