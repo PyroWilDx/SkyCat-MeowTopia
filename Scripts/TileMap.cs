@@ -13,5 +13,4 @@ public partial class TileMap : Godot.TileMap {
     public override void _Ready() {
         _tileMap = this;
     }
-    
 }

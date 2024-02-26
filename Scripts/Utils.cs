@@ -22,6 +22,6 @@ public abstract class Utils {
     };
 
     public static Vector2I GetDirectionVector2(Direction direction) {
-        return DirectionVector2[(int) direction];
+        return DirectionVector2[(int)direction];
     }
 }

@@ -153,6 +153,7 @@ public partial class MeowPlayer : CharacterBody2D {
                     GD.PrintErr("Error : MeowPlayer Axe HitRect");
                     break;
             }
+
             Tree.HitTree(hitRect);
         }
     }

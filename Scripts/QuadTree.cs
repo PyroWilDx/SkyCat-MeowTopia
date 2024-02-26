@@ -5,7 +5,7 @@ namespace SkyCatMeowtopia.Scripts;
 
 public class QuadTree<T> {
     private readonly Rect2 _r;
-    
+
     private readonly bool _isLeaf;
     private readonly QuadTree<T> _upLeft;
     private readonly QuadTree<T> _upRight;
@@ -13,10 +13,10 @@ public class QuadTree<T> {
     private readonly QuadTree<T> _downRight;
 
     private readonly List<T> _eList;
-    
+
     public QuadTree(int d, float x, float y, float w, float h) {
         _r = new Rect2(x, y, w, h);
-        
+
         _isLeaf = d == 0;
         if (_isLeaf) {
             _upLeft = null;
@@ -68,10 +68,10 @@ public class QuadTree<T> {
         if (_isLeaf) {
             return _eList;
         }
+
         if (_upLeft.HasPoint(atPosition)) return _upLeft.GetElements(atPosition);
         if (_upRight.HasPoint(atPosition)) return _upRight.GetElements(atPosition);
         if (_downLeft.HasPoint(atPosition)) return _downLeft.GetElements(atPosition);
         return _downRight.GetElements(atPosition);
     }
-    
 }

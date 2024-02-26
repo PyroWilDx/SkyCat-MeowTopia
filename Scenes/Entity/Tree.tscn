@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b0cebutfq04o7"]
+[gd_scene load_steps=29 format=3 uid="uid://b0cebutfq04o7"]
 
 [ext_resource type="Script" path="res://Scripts/Tree.cs" id="1_hmfne"]
 [ext_resource type="Texture2D" uid="uid://bk2lvk0a7uif6" path="res://Sprites/Entity/Tree/TreeNone.png" id="1_jrxm7"]
@@ -190,6 +190,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12yvq"]
 size = Vector2(8, 8)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mhq0m"]
+radius = 11.0
+
 [node name="Tree" type="StaticBody2D"]
 script = ExtResource("1_hmfne")
 
@@ -202,3 +205,12 @@ speed_scale = 2.6
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_12yvq")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShapeAlpha" type="CollisionShape2D" parent="Area"]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_mhq0m")
+
+[connection signal="body_entered" from="Area" to="." method="_OnAreaBodyEntered"]
+[connection signal="body_exited" from="Area" to="." method="_OnAreaBodyExited"]
