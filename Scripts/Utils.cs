@@ -24,4 +24,14 @@ public abstract class Utils {
     public static Vector2I GetDirectionVector2(Direction direction) {
         return DirectionVector2[(int)direction];
     }
+
+    public static double GetAnimationTotalLength(AnimatedSprite2D animatedSprite, string frameName) {
+        double totalLength = 0;
+        double animSpeed = 5.0 * animatedSprite.GetPlayingSpeed();
+        int n = animatedSprite.SpriteFrames.GetFrameCount(frameName);
+        for (int i = 0; i < n; i++) {
+            totalLength += animatedSprite.SpriteFrames.GetFrameDuration(frameName, i) / animSpeed;
+        }
+        return totalLength;
+    }
 }

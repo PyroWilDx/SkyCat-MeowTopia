@@ -5,22 +5,20 @@ using System.Collections.Generic;
 
 public partial class Tree : StaticBody2D, IDamageable {
     private AnimatedSprite2D _animatedSprite;
-    private Rect2 _colRect;
     private int _hp = 6;
 
     public override void _Ready() {
         _animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite");
-
-        CollisionShape2D colShape = GetNode<CollisionShape2D>("CollisionShapeBlock");
-        _colRect = new Rect2(Position - colShape.Shape.GetRect().Size / 2, colShape.Shape.GetRect().Size);
     }
 
     public override void _Process(double dt) {
-        if (_hp <= 0 && !_animatedSprite.IsPlaying()) QueueFree();
+        if (!IsAlive()) {
+            if (!_animatedSprite.IsPlaying()) QueueFree();
+        }
     }
 
     public void _OnAreaBodyEntered(Node2D body) {
-        if (body.Name == "MeowPlayer") {
+        if (body.Name == "MeowPlayer" && IsAlive()) {
             Tween tween = GetTree().CreateTween();
             tween.TweenProperty(_animatedSprite, "modulate",
                     new Color(1, 1, 1, 0.4f), 0.2f)
@@ -31,7 +29,7 @@ public partial class Tree : StaticBody2D, IDamageable {
     }
 
     public void _OnAreaBodyExited(Node2D body) {
-        if (body.Name == "MeowPlayer") {
+        if (body.Name == "MeowPlayer" && IsAlive()) {
             Tween tween = GetTree().CreateTween();
             tween.TweenProperty(_animatedSprite, "modulate",
                     new Color(1, 1, 1, 1), 0.2f)
@@ -41,13 +39,25 @@ public partial class Tree : StaticBody2D, IDamageable {
         }
     }
 
-    private Rect2 GetCollisionRect() {
-        return _colRect;
+    public void TakeDamage() {
+        if (!IsAlive()) return;
+        
+        _hp--;
+        if (_hp > 0) {
+            _animatedSprite.Play("Hurt");
+        } else {
+            _animatedSprite.Play("Death");
+            Tween tween = GetTree().CreateTween();
+            tween.TweenProperty(_animatedSprite, "modulate",
+                    new Color(1, 1, 1, 0),
+                    Utils.GetAnimationTotalLength(_animatedSprite, "Death"))
+                .SetEase(Tween.EaseType.InOut)
+                .SetTrans(Tween.TransitionType.Linear);
+            tween.Play();
+        }
     }
 
-    public void TakeDamage() {
-        _hp--;
-        if (_hp > 0) _animatedSprite.Play("Hurt");
-        else _animatedSprite.Play("Death");
+    public bool IsAlive() {
+        return _hp > 0;
     }
 }

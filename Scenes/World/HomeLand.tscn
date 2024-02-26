@@ -1468,4 +1468,13 @@ script = ExtResource("3_tsl7l")
 [node name="Tree" parent="YSort" instance=ExtResource("7_tu3q4")]
 position = Vector2(64, 31)
 
+[node name="Tree2" parent="YSort" instance=ExtResource("7_tu3q4")]
+position = Vector2(-26, 27)
+
+[node name="Tree3" parent="YSort" instance=ExtResource("7_tu3q4")]
+position = Vector2(62, 78)
+
+[node name="Tree4" parent="YSort" instance=ExtResource("7_tu3q4")]
+position = Vector2(122, 76)
+
 [node name="MeowUI" parent="." instance=ExtResource("4_l61uy")]
