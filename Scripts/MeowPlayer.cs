@@ -135,26 +135,33 @@ public partial class MeowPlayer : CharacterBody2D {
 
     private void Axe() {
         if (IsFrameNew(6)) {
-            Rect2 hitRect = new Rect2();
+            Vector2 hitPosition = Vector2.Zero;
+            float rotation = 0;
             switch (_currDirection) {
                 case Utils.Direction.Up:
-                    hitRect = new Rect2(Position.X, Position.Y - 14, 10, 18);
+                    hitPosition.X += 6;
+                    hitPosition.Y -= 9.2f;
                     break;
                 case Utils.Direction.Down:
-                    hitRect = new Rect2(Position.X - 10, Position.Y - 6, 10, 18);
+                    hitPosition.X -= 8;
                     break;
                 case Utils.Direction.Left:
-                    hitRect = new Rect2(Position.X - 18, Position.Y - 2, 18, 10);
+                    hitPosition.X -= 4;
+                    hitPosition.Y -= 2;
+                    rotation = (float) (Math.PI / 2);
                     break;
                 case Utils.Direction.Right:
-                    hitRect = new Rect2(Position.X, Position.Y - 2, 18, 10);
+                    hitPosition.X += 2;
+                    hitPosition.Y -= 2;
+                    rotation = (float) (Math.PI / 2);
                     break;
                 default:
                     GD.PrintErr("Error : MeowPlayer Axe HitRect");
                     break;
             }
 
-            Tree.HitTree(hitRect);
+            MeowAttack.Instanciate(this, hitPosition, 6, 18, rotation)
+                .SetMaxDuration(0.1);
         }
     }
 }
