@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace SkyCatMeowtopia.Scripts;
+namespace SkyCatMeowTopia.Scripts;
 
 public abstract class Utils {
     private Utils() { }

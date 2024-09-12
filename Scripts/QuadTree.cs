@@ -1,7 +1,7 @@
 ﻿using Godot;
 using System.Collections.Generic;
 
-namespace SkyCatMeowtopia.Scripts;
+namespace SkyCatMeowTopia.Scripts;
 
 public class QuadTree<T> {
     private readonly Rect2 _r;

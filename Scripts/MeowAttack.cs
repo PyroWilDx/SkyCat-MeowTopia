@@ -1,5 +1,5 @@
 using Godot;
-using SkyCatMeowtopia.Scripts;
+using SkyCatMeowTopia.Scripts;
 using System;
 
 public partial class MeowAttack : Area2D {

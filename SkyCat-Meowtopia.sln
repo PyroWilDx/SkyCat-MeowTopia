@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyCat-Meowtopia", "SkyCat-Meowtopia.csproj", "{9398FF0F-0D52-4FDD-A5C6-8512BF77C506}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyCat-MeowTopia", "SkyCat-MeowTopia.csproj", "{9398FF0F-0D52-4FDD-A5C6-8512BF77C506}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

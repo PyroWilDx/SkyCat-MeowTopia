@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="SkyCat-Meowtopia"
+config/name="SkyCat-MeowTopia"
 run/main_scene="res://Scenes/World/HomeLand.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://Export/icon.svg"
@@ -27,7 +27,7 @@ window/stretch/scale=3.6
 
 [dotnet]
 
-project/assembly_name="SkyCat-Meowtopia"
+project/assembly_name="SkyCat-MeowTopia"
 
 [input]
 

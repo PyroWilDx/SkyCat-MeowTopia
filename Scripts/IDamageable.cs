@@ -1,4 +1,4 @@
-﻿namespace SkyCatMeowtopia.Scripts;
+﻿namespace SkyCatMeowTopia.Scripts;
 
 public interface IDamageable {
     public void TakeDamage();
